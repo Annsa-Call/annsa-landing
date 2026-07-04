@@ -567,14 +567,14 @@ img {
   margin-bottom: var(--space-md);
 }
 
-.step-card__title {
+.step-card .step-card__title {
   font-size: 1.0625rem;
   font-weight: 700;
   color: var(--deep-ink);
   margin-bottom: var(--space-xs);
 }
 
-.step-card__desc {
+.step-card .step-card__desc {
   font-size: 0.9375rem;
   color: var(--warm-gray);
   line-height: 1.6;
