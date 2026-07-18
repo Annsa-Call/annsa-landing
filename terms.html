@@ -64,7 +64,8 @@
       </div>
 
       <h2 id="acceptance">1. Acceptance of terms</h2>
-      <p>By signing up for or using Annsa's voice receptionist service, you agree to be bound by these Terms of Service. If you don't agree to these terms, do not use the service.</p>
+      <p>Annsa is a Software as a Service (SaaS) operated by Muhammad Ammar as a sole proprietorship.</p>
+      <p>By signing up for or using Annsa's voice receptionist service, you agree to be bound by these Terms of Service. If you don't agree to these terms, don't use the service.</p>
       <p>We may update these terms from time to time. When we do, we'll notify you by email at least 14 days before the changes take effect. If you continue using the service after the changes take effect, you accept the new terms.</p>
 
       <h2 id="service">2. The service</h2>
@@ -78,15 +79,15 @@
         <li>Monthly usage reports</li>
         <li>Setup and configuration using your practice's information</li>
       </ul>
-      <p>The service is designed for dental practices only. Non-dental businesses are not eligible without written agreement from Annsa.</p>
+      <p>The service is designed for dental practices only. Non-dental businesses are not eligible without written agreement from Muhammad Ammar (operating as Annsa).</p>
 
       <h2 id="account">3. Your account</h2>
-      <p>You are responsible for keeping your account details accurate and secure. You must notify us within 48 hours if you suspect unauthorized access to your account.</p>
+      <p>You're responsible for keeping your account details accurate and secure. You must notify us within 48 hours if you suspect unauthorized access to your account.</p>
       <p>You represent that you have the authority to bind your dental practice to these terms if you're signing up on behalf of a business.</p>
 
       <h2 id="payment">4. Payment and billing</h2>
       <p>The service is billed at <strong>$497 USD per month per practice</strong>, due in advance. All fees are non-negotiable and fixed.</p>
-      <p>Payments are processed by Lemon Squeezy, our payment processor. Your payment is governed by Lemon Squeezy's terms in addition to these terms.</p>
+      <p>Payments are securely processed by Paddle.com. Paddle.com acts as the Merchant of Record. Customers purchase subscriptions through Paddle's secure checkout. Your payment is governed by Paddle.com's terms in addition to these terms.</p>
       <p>We don't offer refunds for partial months. If you cancel mid-month, you'll continue to have access until the end of the billing period. No credits are issued for unused time.</p>
       <p>All amounts are in US dollars. Currency conversion fees for international payments are your responsibility.</p>
 
@@ -102,12 +103,12 @@
 
       <h2 id="acceptable-use">6. Acceptable use</h2>
       <p>You agree not to use the service for any illegal purpose or in any way that could damage, disable, or impair the service.</p>
-      <p>The service is intended for dental practice call handling within the United States. Use outside this scope requires written permission from Annsa.</p>
-      <p>You may not resell, redistribute, or sublicense the service without written consent from Annsa.</p>
+      <p>The service is intended for dental practice call handling within the United States. Use outside this scope requires written permission from Muhammad Ammar (operating as Annsa).</p>
+      <p>You may not resell, redistribute, or sublicense the service without written consent from Muhammad Ammar (operating as Annsa).</p>
 
       <h2 id="intellectual-property">7. Intellectual property</h2>
-      <p>Annsa and its licensors own all rights, title, and interest in the service, including the software, technology, and brand assets. These terms don't grant you any ownership rights.</p>
-      <p>You retain all rights to your practice's information, patient data, and materials you provide. You grant Annsa a limited license to use this information solely to deliver the service.</p>
+      <p>Muhammad Ammar (operating as Annsa) and his licensors own all rights, title, and interest in the service, including the software, technology, and brand assets. These terms don't grant you any ownership rights.</p>
+      <p>You retain all rights to your practice's information, patient data, and materials you provide. You grant Muhammad Ammar (operating as Annsa) a limited license to use this information solely to deliver the service.</p>
 
       <h2 id="disclaimers">8. Disclaimers</h2>
       <p>The service is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
@@ -115,8 +116,8 @@
       <p>The service is not a replacement for professional medical or legal advice.</p>
 
       <h2 id="liability">9. Limitation of liability</h2>
-      <p>To the maximum extent permitted by law, Annsa is not liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenue, data, or business opportunities, arising from your use of the service.</p>
-      <p>Annsa's total liability for any claim related to the service is limited to the fees you paid us in the 30 days before the claim arose.</p>
+      <p>To the maximum extent permitted by law, Muhammad Ammar (operating as Annsa) is not liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenue, data, or business opportunities, arising from your use of the service.</p>
+      <p>Muhammad Ammar's total liability for any claim related to the service is limited to the fees you paid us in the 30 days before the claim arose.</p>
 
       <h2 id="contact">10. Contact</h2>
       <p>Questions about these terms? Email us at <a href="mailto:hello@annsa.ai">hello@annsa.ai</a>. We'll respond within one business day during US business hours.</p>
@@ -128,7 +129,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2026 Annsa. All rights reserved.</p>
+        <p>&copy; 2026 Muhammad Ammar (operating as Annsa). All rights reserved.</p>
         <div>
           <a href="index.html">Home</a>&nbsp;&middot;&nbsp;
           <a href="terms.html">Terms</a>&nbsp;&middot;&nbsp;
@@ -139,5 +140,32 @@
     </div>
   </footer>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    const els = document.querySelectorAll(".legal-hero h1, .legal-hero p, .legal-content");
+    els.forEach(el => {
+      el.classList.add("animate-on-scroll");
+      observer.observe(el);
+    });
+  });
+  
+  document.querySelectorAll("a[href^=\x27#\x27]").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+</script>
 </body>
 </html>
